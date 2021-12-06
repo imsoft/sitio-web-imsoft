@@ -36,6 +36,11 @@
 
     $mail -> send();
 
+    $response = new Response();
+    $response->resultado = 'OK';
+    $response->mensaje = 'mensaje enviado';
+    $response->payload = $params;
+
     /*
     if( $mail -> send() ) {
         echo "Mail Send";
