@@ -1,13 +1,94 @@
 <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Imsoft</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
-<body>
-  <app-root></app-root>
-</body>
+<html lang="es-MX">
+
+  <head>
+    <meta charset="utf-8">
+    <title>imSoft - Desarrollo de software - Desarrollo de sitios web - Desarrollo de aplicaciones móviles - Desarrollo de páginas web</title>
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/icon/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <meta http-equiv="content-language" content="es-MX" />
+    <meta http-equiv="content-script-type" content="text/javascript" />
+    <meta http-equiv="content-script-type" content="text/typescript" />
+    <meta http-equiv="content-style-type" content="text/css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+
+    <meta name="addsearch-category" content="Desarrollo de software/Sitios web/Aplicaciones web/Aplicaciones móviles/Tienda en línea/SEO" />
+    <meta name="audience" content="all" />
+    <meta name="author" content="imSoft" />
+    <meta name="category" content="Desarrollo de software/Sitios web/Aplicaciones web/Aplicaciones móviles/Tienda en línea/SEO" />
+    <meta name="copyright" content="imSoft" />
+    <meta name="description" content="Somos una empresa de desarrollo de software en Jalisco, México, donde ayudamos a nuestro cliente y su negocio, ayudándolo a mejorar con el software." /> 
+    <meta name="designer" content="imSoft" />
+    <meta name="distribution" content="global" />
+    <meta name="google" content="translate" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="google-site-verification" content="xprqQmdNIH1sZN3yhPw6WEAHzNvPYsJr6-7FQGCxLKU" />
+    <meta name="geo.region" content="MX-JAL" />
+    <meta name="geo.position" content="20.333333;-103.666667" />
+    <meta name="ICBM" content="20.333333, -103.666667" />
+    <meta name="language" content="Spanish" />
+    <meta name="organization" content="imSoft" />
+    <meta name="keywords" lang="en" content="Software Development, Websites, Web Apps, Mobile Apps, Online Store, SEO" />
+    <meta name="keywords" lang="es" content="Desarrollo de software, Sitios web, Aplicaciones web, Aplicaciones móviles, Tienda en línea, SEO" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="robots" content="index, follow" />
+    <meta name="sitedomain" content="https://imsoft.com.mx/" />
+    <meta name="theme-color" content="#1B9CD9" />
+
+    <link rel="author" href="imSoft"/>
+    <link rel="canonical" href="https://imsoft.com.mx/" />
+    <link rel="manifest" crossorigin="use-credentials" href="/assets/manifest.json" />
+    <link rel="publisher" href="imSoft"/>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/imagenes-imsoft/metas/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/imagenes-imsoft/metas/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/imagenes-imsoft/metas/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/imagenes-imsoft/metas/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/imagenes-imsoft/metas/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/imagenes-imsoft/metas/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/imagenes-imsoft/metas/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/imagenes-imsoft/metas/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/imagenes-imsoft/metas/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="assets/imagenes-imsoft/metas/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="assets/imagenes-imsoft/metas/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="assets/imagenes-imsoft/metas/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="assets/imagenes-imsoft/metas/android-chrome-192x192.png" sizes="192x192">
+    <meta name="msapplication-square70x70logo" content="assets/imagenes-imsoft/metas/smalltile.png" />
+    <meta name="msapplication-square150x150logo" content="assets/imagenes-imsoft/metas/mediumtile.png" />
+    <meta name="msapplication-wide310x150logo" content="assets/imagenes-imsoft/metas/widetile.png" />
+    <meta name="msapplication-square310x310logo" content="assets/imagenes-imsoft/metas/largetile.png" />
+
+    <meta name="twitter:card" content="website" />
+    <meta name="twitter:creator" content="imSoft" />
+    <meta name="twitter:description" content="Somos una empresa de desarrollo de software en Jalisco, México, donde ayudamos a nuestro cliente y su negocio, ayudándolo a mejorar con el software." />
+    <meta name="twitter:image:src" content="assets/imagenes-imsoft/logo-imsoft.webp" />
+    <meta name="twitter:site" content="https://imsoft.com.mx/" />
+    <meta name="twitter:title" content="imSoft - Desarrollo de software - Desarrollo de sitios web - Desarrollo de aplicaciones móviles - Desarrollo de páginas web" />
+
+    <meta property="og:description" content="Somos una empresa de desarrollo de software en Jalisco, México, donde ayudamos a nuestro cliente y su negocio, ayudándolo a mejorar con el software." />
+    <meta property="og:image" content="assets/imagenes-imsoft/logo-imsoft.webp" />
+    <meta property="og:locale" content="mx-MX" />
+    <meta property="og:site_name" content="https://imsoft.com.mx/" />
+    <meta property="og:title" content="imSoft - Desarrollo de software - Desarrollo de sitios web - Desarrollo de aplicaciones móviles - Desarrollo de páginas web" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://imsoft.com.mx/" />
+
+    <meta itemprop="address" content="Jalisco, México" />
+    <meta itemprop="description" content="Somos una empresa de desarrollo de software en Jalisco, México, donde ayudamos a nuestro cliente y su negocio, ayudándolo a mejorar con el software." />
+    <meta itemprop="image" content="assets/imagenes-imsoft/logo-imsoft.webp" />
+    <meta itemprop="name" content="imSoft - Desarrollo de software - Desarrollo de sitios web - Desarrollo de aplicaciones móviles - Desarrollo de páginas web" />
+    <meta itemprop="telephone" content="3325365558" />
+
+  </head>
+  
+  <body>
+    <app-root></app-root>
+  </body>
+  
 </html>

@@ -1,0 +1,61 @@
+
+<div class="container mt-5 mb-3">
+
+    <div class="row text-center g-4">
+
+        <div class="col-sm my-auto">
+            
+            <figure>
+
+                <blockquote class="blockquote">
+                    <p>"Si puedes imaginarlo puedes programarlo."</p>
+                </blockquote>
+
+                <figcaption class="blockquote-footer">
+                    <cite title="Source Title">Alejandro Taboada Sanchez</cite>
+                </figcaption>
+
+            </figure>
+            <br>
+
+            <a href="/">
+                <img class="quitarZoom" src="assets/imagenes-imsoft/logo-imsoft.webp" height="106px" width="296px" alt="imSoft - Desarrollo de software - Desarrollo de sitios web - Desarrollo de aplicaciones móviles - Desarrollo de páginas web">
+            </a>
+
+        </div>
+
+        <div class="col-sm">
+            
+            <h4 class="fw-bold">Conocenos</h4>
+
+            <nav class="nav flex-column ms-1 mb-3">
+                <a *ngFor="let seccionesmenu of seccionesMenu" routerLink="{{ seccionesmenu.ruta }}" class="nav-link quitarZoom quitarFoco">{{ seccionesmenu.nombre }}</a>
+            </nav>
+
+        </div>
+
+        <div class="col-sm my-auto">
+
+            <h4 class="fw-bold">Estemos en contacto</h4>
+
+            <nav class="nav flex-row justify-content-center">
+                <a *ngFor="let socialmedia of socialMedia" class="nav-link tamanioIconos quitarZoom" href="{{ socialmedia.enlace }}" ><i class="{{ socialmedia.icono }}"></i></a>
+            </nav>
+
+            <nav class="nav flex-row justify-content-center">
+                <a *ngFor="let datoscontacto of datosContacto" class="nav-link quitarZoom" href="{{ datoscontacto.enlace }}" ><i class="{{ datoscontacto.icono }}"></i> {{ datoscontacto.dato }}</a>
+            </nav>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="container-fluid">
+
+    <div class="row bg-copyright">
+        <p class="text-center">Copyright © 2021 - imSoft | Guadalajara, Jalisco, México </p>
+    </div>
+
+</div>

@@ -1,0 +1,43 @@
+.bg-copyright {
+    background-color: var(--azul-imsoft);
+}
+
+.bg-copyright p {
+    color: #FFFFFF;
+    margin-top: 16px;
+}
+
+h4, blockquote {
+    color: var(--azul-imsoft);
+}
+
+a, figcaption {
+    color: var(--gris-imsoft);
+}
+
+li {
+    list-style: none;
+} 
+
+a:hover {
+    color: var(--azul-imsoft);
+    transform: scale( 1.2 );
+    transition: transform .50s;
+}
+
+img:hover {
+    transform: scale( 1.1 );
+    transition: transform .50s;
+}
+
+.tamanioIconos {
+    transform: scale( 1.3 );
+}
+
+.tamanioIconos:hover {
+    transform: scale( 1.6 );
+}
+
+.quitarFoco:focus {
+    color: var(--gris-imsoft);
+}

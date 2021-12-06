@@ -1,0 +1,35 @@
+<div class="menu-contacto">
+
+    <div class="row row-cols-1 g-2">
+
+        <div class="col col-md-1 col-lg-2 col-xl-4 d-none d-sm-block">
+            <ul class="nav justify-content-center">
+                    
+                <a href="/"><img class="mt-1 quitarZoom" src="assets/imagenes-imsoft/isotipo-imsoft-blanco.webp" height="25px" width="25px" alt="imSoft - Desarrollo de software - Desarrollo de sitios web - Desarrollo de aplicaciones móviles - Desarrollo de páginas web"></a>
+                
+            </ul>
+        </div>
+
+        <div class="col col-md-6 col-lg-5 col-xl-4">
+            <ul class="nav justify-content-center">
+                    
+                <li *ngFor="let datoscontacto of datosContacto" class="nav-item informacionContacto quitarZoom">
+                    <a class="nav-link" href="{{ datoscontacto.enlace }}" ><i class="{{ datoscontacto.icono }}"></i> {{ datoscontacto.dato }}</a>
+                </li>
+                
+            </ul>
+        </div>
+
+        <div class="col col-md-5 col-lg-5 col-xl-4">
+            <ul class="nav justify-content-center">
+
+                <li *ngFor="let socialmedia of socialMedia" class="nav-item iconosRedesSociales quitarZoom">
+                    <a class="nav-link" href="{{ socialmedia.enlace }}" ><i class="{{ socialmedia.icono }}"></i></a>
+                </li>
+                
+            </ul>
+        </div>
+
+    </div>
+
+</div>

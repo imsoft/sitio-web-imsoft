@@ -1,0 +1,31 @@
+.menu-contacto {
+    background-color: var(--azul-imsoft);
+    font-size: small;
+}
+
+a {
+    color: #FFFFFF;
+}
+
+a:hover {
+    color: #FFFFFF;
+    transition: transform .50s;
+}
+
+.informacionContacto:hover, img:hover {
+    transform: scale( 1.1 );
+}
+
+.iconosRedesSociales:hover {
+    transform: scale( 1.5 );
+}
+
+img:hover {
+    cursor: pointer;
+    transition: transform .45s;
+}
+
+.col-center {
+    float: none;
+    margin: 0 auto;
+}

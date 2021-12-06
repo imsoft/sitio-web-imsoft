@@ -1,0 +1,39 @@
+blockquote, h1, h3 {
+    color: var(--gris-imsoft);
+}
+
+strong {
+    color: var(--azul-imsoft);
+    font-size: 50px;
+}
+
+span, p, h5, h2 {
+    color: var(--azul-imsoft);
+}
+
+li {
+    list-style: none;
+}
+
+p, .card-text {
+    color: var(--gris-imsoft);
+}
+
+li:hover, a:hover {
+    transform: scale( 1.1 );
+    color: var(--azul-imsoft);
+    cursor: pointer;
+}
+
+a {
+    background-color: var(--azul-imsoft);
+}
+
+a:hover {
+    background-color: var(--azul-imsoft);
+    color: #FFFFFF;
+}
+
+.card:hover {
+    transform: scale( 1.1 );
+}

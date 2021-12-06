@@ -1,0 +1,41 @@
+h4, span, label {
+    color: var(--azul-imsoft);
+}
+
+p {
+    text-align: justify;
+}
+
+a, p {
+    color: var(--gris-imsoft);
+}
+
+a:hover {
+    color: var(--azul-imsoft);
+    transform: scale( 1.2 );
+    transition: transform .50s;
+}
+
+.tamanioIconos {
+    transform: scale( 1.3 );
+}
+
+.tamanioIconos:hover {
+    transform: scale( 1.6 );
+}
+
+button {
+    background-color: var(--azul-imsoft);
+}
+
+button:hover {
+    transform: scale( 1.1 );
+    color: var(--azul-imsoft);
+    background-color: var(--azul-imsoft);
+    color: #FFFFFF;
+}
+
+.quitarFoco:focus {
+    color: #FFFFFF;
+    background-color: var(--azul-imsoft);
+}

@@ -1,0 +1,58 @@
+<div class="container">
+
+    <div class="row align-items-center mt-1 gy-5 gx-5" data-aos="fade-up" data-aos-duration="1200">
+
+        <div class="col-sm">
+
+            <form (ngSubmit)="enviar()" autocomplete="off" [formGroup]="formularioContacto">
+
+                <div class="mb-3">
+                    <label for="LblNombre" class="form-label fs-5">Nombre</label>
+                    <input type="text" class="form-control" formControlName="nombre" id="TxtNombre" aria-describedby="nombreEtiqueta">
+                    <div id="nombreEtiqueta" class="form-text">Será un gusto conocerte.</div>
+                    <span class="form-text text-danger" *ngIf="campoNoEsValido('nombre')">* Se le olvido escribir su nombre</span>
+                </div>
+
+                <div class="mb-3">
+                    <label for="LblTelefono" class="form-label fs-5">Teléfono</label>
+                    <input type="tel" class="form-control" formControlName="telefono" id="TxtTelefono" aria-describedby="telefonoEtiqueta">
+                    <div id="telefonoEtiqueta" class="form-text">No te llamaremos a las 3 a.m.</div>
+                    <span class="form-text text-danger" *ngIf="campoNoEsValido('telefono')">* Se le olvido escribir su teléfono</span>
+                </div>
+
+                <div class="mb-3">
+                    <label for="LblEmail" class="form-label fs-5">Correo electrónico</label>
+                    <input type="email" class="form-control" formControlName="correo" id="TxtEmail" aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text">ejemplo@ejemplo.com</div>
+                    <span class="form-text text-danger" *ngIf="campoNoEsValido('correo')">* Se le olvido escribir su correo electrónico</span>
+                </div>
+
+                <div class="mb-3">
+                    <label for="LblMensaje" class="form-label fs-5">Mensaje</label>
+                    <textarea class="form-control" formControlName="mensaje" placeholder="Escribemos tu idea." id="TxtMensaje" style="height: 100px"></textarea>
+                    <span class="form-text text-danger" *ngIf="campoNoEsValido('mensaje')">* Se le olvido escribir su mensaje</span>
+                </div>
+
+                <button type="submit" class="btn btn-primary fs-5 border-0 quitarZoom quitarFoco">Enviar</button>
+            
+            </form>
+
+        </div>
+
+        <div class="col-sm">
+
+            <p class="fs-5 mb-4">En <span>imSoft</span> siempre estamos atentos a cualquier proyecto y dudas de nuestros clientes, somos los más profesionales y transparentes en cuanto a nuestro trabajo se trata, pongamonos en contacto para mejorar su empresa con ayuda del software.</p>
+
+            <nav class="nav flex-row justify-content-center">
+                <a *ngFor="let socialmedia of socialMedia" class="nav-link tamanioIconos quitarZoom" href="{{ socialmedia.enlace }}" ><i class="{{ socialmedia.icono }}"></i></a>
+            </nav>
+
+            <nav class="nav flex-row justify-content-center">
+                <a *ngFor="let datoscontacto of datosContacto" class="nav-link quitarZoom" href="{{ datoscontacto.enlace }}" ><i class="{{ datoscontacto.icono }}"></i> {{ datoscontacto.dato }}</a>
+            </nav>
+
+        </div>
+
+    </div>
+
+</div>

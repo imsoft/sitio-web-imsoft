@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-lg">
+    
+    <div class="container">
+          
+        <a href="/" class="navbar-brand quitarZoom">
+            <img src="assets/imagenes-imsoft/logo-imsoft.webp" height="40px" width="111px" alt="">
+        </a>
+
+        <button class="navbar-toggler ml-auto custom-toggler"
+                (click)="cambiarEstado()"
+                id="button-menubar"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#seccionesMenu"
+                aria-controls="seccionesMenu"
+                aria-expanded="true"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" aria-expanded="true" id="seccionesMenu">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                
+                <li *ngFor="let seccionesmenu of seccionesMenu" class="nav-item">
+                    <a routerLink="{{ seccionesmenu.ruta }}" (click)="cerrarMenu()" class="nav-link quitarZoom">{{ seccionesmenu.nombre }}</a>
+                </li>
+
+            </ul>
+        </div>
+
+    </div>
+
+</nav>

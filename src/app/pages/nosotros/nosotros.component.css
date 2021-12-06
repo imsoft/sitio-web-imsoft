@@ -1,0 +1,16 @@
+p, li {
+    color: var(--gris-imsoft);
+    text-align: justify;
+}
+
+h2 {
+    color: var(--azul-imsoft);
+}
+
+img:hover {
+    transform: scale( 1.1 );
+}
+
+img {
+    cursor: pointer;
+}
