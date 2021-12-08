@@ -50,7 +50,7 @@
             $mail -> addAddress($params -> mail, $params -> nombre);
             $mail -> isHTML( true );
             $mail -> Subject    = "¡Contacto desde el sitio web!";
-            $mail -> Body       = "<h1>Aqui va el mensaje</h1>";
+            $mail -> Body       =  $newhtml;//"<h1>Aqui va el mensaje</h1>";
             $mail -> send();
             $mail -> smtpClose();
 
@@ -65,7 +65,7 @@
 
             $response = new Response();
             $response->resultado = 'FAIL';
-            $response->mensaje = "Error: { $mail -> ErrorInfo }";
+            $response->mensaje = "Error: {".json_encode($mail -> ErrorInfo)."}";
             $response->payload = $params;
 
             echo'<script type="text/javascript"> alert("No Funciono"); </script>';
