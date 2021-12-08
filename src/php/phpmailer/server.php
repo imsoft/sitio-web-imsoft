@@ -30,7 +30,7 @@
 
         $html = SMTP::BODYMAIL;
         $tags = array("[nombre]", "[telefono]", "[mail]", "[mensaje]");
-        $val  = array($params -> nombre, $params -> telefono, $params -> mail, $params -> mensaje);
+        $val  = array($params -> nombre, $params -> telefono, $params -> correo, $params -> mensaje);
 
         $newhtml = str_replace($tags, $val, $html);
 
@@ -47,7 +47,7 @@
             $mail -> SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
             $mail -> Port       = 465;
             $mail -> setFrom("contacto@imsoft.com.mx");
-            $mail -> addAddress($params -> mail, $params -> nombre);
+            $mail -> addAddress($params -> correo, $params -> nombre);
             $mail -> isHTML( true );
             $mail -> Subject    = "¡Contacto desde el sitio web!";
             $mail -> Body       =  $newhtml;//"<h1>Aqui va el mensaje</h1>";
