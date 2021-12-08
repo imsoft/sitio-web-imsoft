@@ -125,7 +125,7 @@ export class ContactoComponent implements OnInit {
           showConfirmButton: false,
           timer: 1500
         });
-        console.log( 'error: ' + error );
+        console.log( 'error: ' + JSON.stringify(error) );
       });
     }
 

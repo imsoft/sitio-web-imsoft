@@ -23,7 +23,7 @@
         $response -> resultado = 'FAIL';
         $response -> mensaje = "Error: parametros vacios";
         $response -> payload = $params;
-        echo'<script type="text/javascript"> alert("No Funciono"); </script>';
+        //echo'<script type="text/javascript"> alert("No Funciono"); </script>';
         
     }
     else {
@@ -59,7 +59,7 @@
             $response->mensaje = 'mensaje enviado';
             $response->payload = $params;
 
-            echo'<script type="text/javascript"> alert("Funciono"); </script>';
+            //echo'<script type="text/javascript"> alert("Funciono"); </script>';
 
         } catch( Exception $e ) {
 
@@ -68,7 +68,7 @@
             $response->mensaje = "Error: {".json_encode($mail -> ErrorInfo)."}";
             $response->payload = $params;
 
-            echo'<script type="text/javascript"> alert("No Funciono"); </script>';
+            //echo'<script type="text/javascript"> alert("No Funciono"); </script>';
 
         }
     }
