@@ -24,7 +24,7 @@
         $response -> mensaje = "Error: parametros vacios";
         $response -> payload = $params;
         //echo'<script type="text/javascript"> alert("No Funciono"); </script>';
-        
+        http_response_code(400);
     }
     else {
 
@@ -61,6 +61,7 @@
 
             //echo'<script type="text/javascript"> alert("Funciono"); </script>';
 
+            http_response_code(200);
         } catch( Exception $e ) {
 
             $response = new Response();
@@ -69,11 +70,12 @@
             $response->payload = $params;
 
             //echo'<script type="text/javascript"> alert("No Funciono"); </script>';
-
+            http_response_code(400);
         }
     }
 
     header('Content-Type: application/json');
+    
     echo json_encode($response);
 
 ?>
