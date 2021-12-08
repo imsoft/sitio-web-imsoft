@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  baseUrl: 'http://localhost:8888/index.php'
+  baseUrl: 'http://localhost:8888/server.php'
 };
 
 /*

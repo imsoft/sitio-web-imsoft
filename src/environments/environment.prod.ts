@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  baseUrl: './php/index.php'
+  baseUrl: '/src/php/phpmailer/server.php'
 };
