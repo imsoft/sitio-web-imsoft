@@ -93,8 +93,8 @@ export class ContactoComponent implements OnInit {
       this.emailService.sendContactEmail( usercontac ).subscribe((resp: any) => {
         if(resp.resultado)
         {
-          if(resp.resultado == 'OK')
-          {
+          console.log( 'resp: ' + resp.resultado );
+          if(resp.resultado == 'OK') {
             Swal.fire({
               position: 'top-end',
               icon: 'success',
@@ -104,13 +104,12 @@ export class ContactoComponent implements OnInit {
               timer: 1500
             });
           }
-          else
-          {
+          else {
             Swal.fire({
               position: 'top-end',
               icon: 'error',
               title: 'Lo sentimos',
-              text: 'No se logró enviar tu mensaje, por favor intenta mas tarde...',
+              text: 'No fue OK',
               showConfirmButton: false,
               timer: 1500
             });
@@ -126,6 +125,7 @@ export class ContactoComponent implements OnInit {
           showConfirmButton: false,
           timer: 1500
         });
+        console.log( 'error: ' + error );
       });
     }
 

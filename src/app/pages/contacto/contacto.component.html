@@ -4,7 +4,7 @@
 
         <div class="col-sm">
 
-            <form (ngSubmit)="enviar()" autocomplete="off" [formGroup]="formularioContacto">
+            <form method="post" (ngSubmit)="enviar()" [formGroup]="formularioContacto">
 
                 <div class="mb-3">
                     <label for="LblNombre" class="form-label fs-5">Nombre</label>

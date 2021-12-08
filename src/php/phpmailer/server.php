@@ -1,12 +1,12 @@
 <?php
     
-    require 'includes/PHPMailer.php';
-    require 'includes/SMTP.php';
-    require 'includes/Exception.php';
-
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\SMTP;
     use PHPMailer\PHPMailer\Exception;
+    
+    require '/includes/PHPMailer.php';
+    require '/includes/SMTP.php';
+    require '/includes/Exception.php';
 
     header('Access-Control-Allow-Origin: *'); 
     header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
@@ -23,13 +23,14 @@
         $response -> resultado = 'FAIL';
         $response -> mensaje = "Error: parametros vacios";
         $response -> payload = $params;
+        echo'<script type="text/javascript"> alert("No Funciono"); </script>';
         
     }
     else {
 
         $html = SMTP::BODYMAIL;
-        $tags = array("[nombre]", "[mail]", "[telefono]", "[mensaje]");
-        $val  = array($params -> nombre, $params -> mail,$params -> telefono, $params -> mensaje);
+        $tags = array("[nombre]", "[telefono]", "[mail]", "[mensaje]");
+        $val  = array($params -> nombre, $params -> telefono, $params -> mail, $params -> mensaje);
 
         $newhtml = str_replace($tags, $val, $html);
 
@@ -37,14 +38,13 @@
 
         try {
             
-            $mail = new PHPMailer();
-            $mail -> SMTPDebug  = SMTP::DEBUG_OFF;
+            $mail -> SMTPDebug  = SMTP::DEBUG_SERVER;
             $mail -> isSMTP();
             $mail -> Host       = 'imsoft.com.mx';
             $mail -> SMTPAuth   = true;
             $mail -> Username   = "contacto@imsoft.com.mx";
             $mail -> Password   = "contacto_imsoft_2487";
-            $mail -> SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+            $mail -> SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
             $mail -> Port       = 465;
             $mail -> setFrom("contacto@imsoft.com.mx");
             $mail -> addAddress($params -> mail, $params -> nombre);
@@ -59,12 +59,16 @@
             $response->mensaje = 'mensaje enviado';
             $response->payload = $params;
 
+            echo'<script type="text/javascript"> alert("Funciono"); </script>';
+
         } catch( Exception $e ) {
 
             $response = new Response();
             $response->resultado = 'FAIL';
             $response->mensaje = "Error: { $mail -> ErrorInfo }";
             $response->payload = $params;
+
+            echo'<script type="text/javascript"> alert("No Funciono"); </script>';
 
         }
     }
