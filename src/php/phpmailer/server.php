@@ -4,9 +4,9 @@
     use PHPMailer\PHPMailer\SMTP;
     use PHPMailer\PHPMailer\Exception;
     
-    require '/includes/PHPMailer.php';
-    require '/includes/SMTP.php';
-    require '/includes/Exception.php';
+    require 'includes/PHPMailer.php';
+    require 'includes/SMTP.php';
+    require 'includes/Exception.php';
 
     header('Access-Control-Allow-Origin: *'); 
     header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
