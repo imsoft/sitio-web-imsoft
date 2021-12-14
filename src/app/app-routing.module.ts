@@ -3,13 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { InicioComponent } from './pages/inicio/inicio.component';
 import { NosotrosComponent } from './pages/nosotros/nosotros.component';
 import { PortafolioComponent } from './pages/portafolio/portafolio.component';
-import { ServiciosComponent } from './pages/servicios/servicios.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
 
 const routes: Routes = [
   {
-    path: 'inicio',
-    component: InicioComponent
+    path: '',
+    component: InicioComponent,
+    pathMatch: 'full'
   },
   {
     path: 'nosotros',
@@ -17,7 +17,7 @@ const routes: Routes = [
   },
   {
     path: 'servicios',
-    component: ServiciosComponent
+    loadChildren: () => import( './pages/servicios/servicios.module' ).then( m => m.ServiciosModule )
   },
   {
     path: 'portafolio',
@@ -29,12 +29,15 @@ const routes: Routes = [
   },
   {
     path: '**',
-    component: InicioComponent
+    redirectTo: ''
   },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes, {
+    useHash: true
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

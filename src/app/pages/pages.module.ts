@@ -8,7 +8,6 @@ import { ContactoComponent } from './contacto/contacto.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { NosotrosComponent } from './nosotros/nosotros.component';
 import { PortafolioComponent } from './portafolio/portafolio.component';
-import { ServiciosComponent } from './servicios/servicios.component';
 
 
 @NgModule({
@@ -16,8 +15,7 @@ import { ServiciosComponent } from './servicios/servicios.component';
     ContactoComponent,
     InicioComponent,
     NosotrosComponent,
-    PortafolioComponent,
-    ServiciosComponent,
+    PortafolioComponent
   ],
   imports: [
     CommonModule,

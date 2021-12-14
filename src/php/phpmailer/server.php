@@ -23,7 +23,7 @@
         $response -> resultado = 'FAIL';
         $response -> mensaje = "Error: parametros vacios";
         $response -> payload = $params;
-        //echo'<script type="text/javascript"> alert("No Funciono"); </script>';
+
         http_response_code(400);
     }
     else {
@@ -47,35 +47,32 @@
             $mail -> SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
             $mail -> Port       = 465;
             $mail -> setFrom("contacto@imsoft.com.mx");
-            $mail -> addAddress($params -> correo, $params -> nombre);
+            $mail -> addAddress( "contacto@imsoft.com.mx", $params -> nombre );
+            $mail -> addCC( $params -> correo );
             $mail -> isHTML( true );
-            $mail -> Subject    = "¡Contacto desde el sitio web!";
-            $mail -> Body       =  $newhtml;//"<h1>Aqui va el mensaje</h1>";
+            $mail -> Subject    = "Contacto desde el sitio web";
+            $mail -> Body       = $newhtml;
             $mail -> send();
             $mail -> smtpClose();
 
             $response = new Response();
-            $response->resultado = 'OK';
-            $response->mensaje = 'mensaje enviado';
-            $response->payload = $params;
-
-            //echo'<script type="text/javascript"> alert("Funciono"); </script>';
+            $response -> resultado = 'OK';
+            $response -> mensaje = 'mensaje enviado';
+            $response -> payload = $params;
 
             http_response_code(200);
+
         } catch( Exception $e ) {
 
             $response = new Response();
-            $response->resultado = 'FAIL';
-            $response->mensaje = "Error: {".json_encode($mail -> ErrorInfo)."}";
-            $response->payload = $params;
+            $response -> resultado = 'FAIL';
+            $response -> mensaje = "Error: {".json_encode($mail -> ErrorInfo)."}";
+            $response -> payload = $params;
 
-            //echo'<script type="text/javascript"> alert("No Funciono"); </script>';
             http_response_code(400);
         }
     }
 
     header('Content-Type: application/json');
-    
-    echo json_encode($response);
 
 ?>

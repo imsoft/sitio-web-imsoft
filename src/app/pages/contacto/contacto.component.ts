@@ -90,10 +90,9 @@ export class ContactoComponent implements OnInit {
 
       const usercontac = this.formularioContacto.value;
 
-      this.emailService.sendContactEmail( usercontac ).subscribe((resp: any) => {
-        if(resp.resultado)
-        {
-          console.log( 'resp: ' + resp.resultado );
+      this.emailService.sendContactEmail( usercontac ).subscribe(( resp: any ) => {
+
+        //if( resp.resultado ) {
           if(resp.resultado == 'OK') {
             Swal.fire({
               position: 'top-end',
@@ -114,9 +113,10 @@ export class ContactoComponent implements OnInit {
               timer: 1500
             });
           }
-        }
-      },
-      ( error ) => {
+        //}
+
+      }
+      /*,( error ) => {
         Swal.fire({
           position: 'top-end',
           icon: 'error',
@@ -125,8 +125,9 @@ export class ContactoComponent implements OnInit {
           showConfirmButton: false,
           timer: 1500
         });
-        console.log( 'error: ' + JSON.stringify(error) );
-      });
+        console.log( error );
+      }*/
+      );
     }
 
     this.formularioContacto.reset();

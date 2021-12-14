@@ -25,7 +25,7 @@ export class MenuComponent implements OnInit {
     ,
     {
       nombre: 'Servicios',
-      ruta  : '/servicios'
+      ruta  : '/servicios/oferta-de-servicios'
     }
     ,
     {

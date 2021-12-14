@@ -17,7 +17,7 @@ export class EmailService {
 
     return this.http.post(this.url, formContact)
            .pipe(
-            timeout(2000)
+            timeout(6000)
            );
            
   }

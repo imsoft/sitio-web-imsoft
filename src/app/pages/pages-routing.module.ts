@@ -4,10 +4,6 @@ import { InicioComponent } from './inicio/inicio.component';
 
 const routes: Routes = [
   {
-    path: 'pages',
-    loadChildren: () => import( './pages.module' ).then( m => m.PagesModule )
-  },
-  {
     path: '**',
     component: InicioComponent
   }

@@ -1,0 +1,37 @@
+h1, h2 {
+    color: var(--azul-imsoft);
+}
+    
+p {
+    color: var(--gris-imsoft);
+}
+    
+a, .bg-azul-imsoft {
+    color: #FFFFFF;
+    background-color: var(--azul-imsoft);
+}
+    
+a:hover {
+    color: #FFFFFF;
+    background-color: var(--azul-imsoft);
+    transform: scale( 1.1 );
+}
+
+.icono-descriptivo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: #fff;
+    border-radius: .75rem;
+}
+      
+@media (min-width: 992px) {
+    .rounded-lg-3 {
+      border-radius: .3rem;
+    }
+}
+  
