@@ -5,6 +5,7 @@ import { NosotrosComponent } from './pages/nosotros/nosotros.component';
 import { PortafolioComponent } from './pages/portafolio/portafolio.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
 import { ErrorPageComponent } from './shared/error-page/error-page.component';
+import { AvisoDePrivacidadComponent } from './shared/aviso-de-privacidad/aviso-de-privacidad.component';
 
 const routes: Routes = [
   {
@@ -27,6 +28,10 @@ const routes: Routes = [
   {
     path: 'contacto',
     component: ContactoComponent
+  },
+  {
+    path: 'aviso-de-privacidad',
+    component: AvisoDePrivacidadComponent
   },
   {
     path: '**',

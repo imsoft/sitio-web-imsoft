@@ -41,3 +41,11 @@ img:hover {
 .quitarFoco:focus {
     color: var(--gris-imsoft);
 }
+
+.colorEnlace {
+    color: #FFFFFF;
+}
+
+.colorEnlace:hover {
+    color: #FFFFFF;
+}
