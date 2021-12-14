@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { InicioComponent } from '../inicio/inicio.component';
 import { AplicacionesMovilesComponent } from './aplicaciones-moviles/aplicaciones-moviles.component';
 import { AplicacionesWebComponent } from './aplicaciones-web/aplicaciones-web.component';
 import { DesarrolloDeSoftwareComponent } from './desarrollo-de-software/desarrollo-de-software.component';
@@ -8,6 +7,7 @@ import { OfertaServiciosComponent } from './oferta-servicios/oferta-servicios.co
 import { SeoComponent } from './seo/seo.component';
 import { SitiosWebComponent } from './sitios-web/sitios-web.component';
 import { TiendaEnLineaComponent } from './tienda-en-linea/tienda-en-linea.component';
+import { ErrorPageComponent } from '../../shared/error-page/error-page.component';
 
 const routes: Routes = [
   {
@@ -43,7 +43,7 @@ const routes: Routes = [
       },
       {
         path: '**',
-        component: InicioComponent
+        component: ErrorPageComponent
       }
     ]
   }

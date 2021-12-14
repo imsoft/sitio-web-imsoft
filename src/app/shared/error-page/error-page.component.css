@@ -1,0 +1,32 @@
+h1 {
+    color: var(--azul-imsoft);
+    font-size: 120px;
+}
+
+h2 {
+    color: var(--gris-imsoft);
+    font-size: 60px;
+}
+
+h3 {
+    color: var(--gris-imsoft);
+    font-size: 30px;
+}
+
+a {
+    color: #FFFFFF;
+    background-color: var(--azul-imsoft);
+}
+    
+a:hover {
+    color: #FFFFFF;
+    transform: scale( 1.1 );
+}
+
+img:hover {
+    transform: scale( 1.1 );
+}
+
+img {
+    cursor: pointer;
+}

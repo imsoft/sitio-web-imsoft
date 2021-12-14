@@ -1,9 +1,10 @@
-import { NgModule, Component } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { InicioComponent } from './pages/inicio/inicio.component';
 import { NosotrosComponent } from './pages/nosotros/nosotros.component';
 import { PortafolioComponent } from './pages/portafolio/portafolio.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
+import { ErrorPageComponent } from './shared/error-page/error-page.component';
 
 const routes: Routes = [
   {
@@ -29,7 +30,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: ''
+    component: ErrorPageComponent
   },
 ];
 
