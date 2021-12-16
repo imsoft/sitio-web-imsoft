@@ -32,8 +32,7 @@ class SMTP
 {
     const BODYMAIL = "
     <!DOCTYPE html>
-    <html lang='en' xmlns='http://www.w3.org/1999/xhtml' xmlns:v='urn:schemas-microsoft-com:vml' xmlns:o='urn:schemas-microsoft-com:office:office'>
-    
+    <html lang='es' xmlns='http://www.w3.org/1999/xhtml' xmlns:v='urn:schemas-microsoft-com:vml' xmlns:o='urn:schemas-microsoft-com:office:office'>
     <head>
     <meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
@@ -42,7 +41,7 @@ class SMTP
     <meta name='format-detection' content='telephone=no'>
     <title>Nuevo contacto</title>
     
-    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
     <!--##custom-font-resource##-->
     <!--[if gte mso 16]>
     <xml>
@@ -138,7 +137,7 @@ class SMTP
     
     @media screen and (min-width: 600px) {
     .hide-on-desktop {
-    display: none;
+    display: none !important;
     }
     }
     
@@ -172,6 +171,7 @@ class SMTP
     
     </style>
     
+    
     <!--[if gte mso 9]>
     <style>
     
@@ -183,8 +183,8 @@ class SMTP
     width: 600px;
     }
     
-    .width368 {
-    width: 368px;
+    .width600 {
+    width: 600px;
     height: auto;
     }
     
@@ -196,27 +196,33 @@ class SMTP
     mso-hide: all;
     }
     
+    .hide-on-desktop div {
+    mso-hide: all !important;
+    }
+    
     .nounderline {text-decoration: none !important;}
     
     .mso-font-fix-arial { font-family: Arial, sans-serif;}
-    .mso-font-fix-georgia { font-family: Georgia, sans-serif;}
+    .mso-font-fix-comic_sans_ms { font-family: 'Comic Sans MS', sans-serif;}
+    .mso-font-fix-courier { font-family: Courier, monospace;}
+    .mso-font-fix-georgia { font-family: Georgia, serif;}
+    .mso-font-fix-segoe_ui { font-family: 'Segoe UI', sans-serif;}
     .mso-font-fix-tahoma { font-family: Tahoma, sans-serif;}
-    .mso-font-fix-times_new_roman { font-family: 'Times New Roman', sans-serif;}
+    .mso-font-fix-times_new_roman { font-family: 'Times New Roman', serif;}
     .mso-font-fix-trebuchet_ms { font-family: 'Trebuchet MS', sans-serif;}
     .mso-font-fix-verdana { font-family: Verdana, sans-serif;}
     
     </style>
     <![endif]-->
-    </head>
-    <body id='body' leftmargin='0' marginwidth='0' topmargin='0' marginheight='0' offset='0' style='font-family:Arial, sans-serif; font-size:0px;margin:0;padding:0;background-color:#fae03c;'>
     
+    </head>
+    <body id='body' leftmargin='0' marginwidth='0' topmargin='0' marginheight='0' offset='0' style='font-family:Arial, sans-serif; font-size:0px;margin:0;padding:0;background-color:#ffffff;'>
     <style>
     @media screen and (min-width: 600px) {
     .hide-on-desktop {
     display: none;
     }
     }
-    
     @media all and (max-width: 599px) {
     .hide-on-mobile { 
     display:none !important; 
@@ -230,20 +236,17 @@ class SMTP
     .col {
     width: 100%;
     }
-    
     .fluid-on-mobile { 
     width: 100% !important;
     height: auto !important; 
     text-align:center;
     }
-    
     .fluid-on-mobile img {
     width: 100% !important;
     }
     }
     </style>
-    <div style='background-color:#fae03c;'>
-    
+    <div style='background-color:#ffffff;'>
     <table height='100%' width='100%' cellpadding='0' cellspacing='0' border='0'>
     <tr>
     <td valign='top' align='left'>
@@ -257,33 +260,15 @@ class SMTP
     <table class='width600 main-container' cellpadding='0' cellspacing='0' border='0' width='100%' style='max-width:600px;'>
     <tr>
     <td width='100%'>
-    
     <table cellpadding='0' cellspacing='0' border='0' width='100%'>
     <tr>
-    
     <td valign='top'>
     <table cellpadding='0' cellspacing='0' border='0' width='100%'>
     <tr>
-    
-    <td valign='top' align='center' style='padding:10px;'><!--[if gte mso 9]><table width='368' cellpadding='0' cellspacing='0'><tr><td><![endif]-->
-    
+    <td valign='top' align='center'><!--[if gte mso 9]><table width='600' cellpadding='0' cellspacing='0'><tr><td><![endif]-->
     <table cellpadding='0' cellspacing='0' border='0' style='max-width:100%;' class='fluid-on-mobile img-wrap'>
     <tr>
-    
-    <td valign='top' align='center'><img src='https://images.chamaileon.io/5ed2f506473849393c092f6c/5ed2f5064738490638092f76/1608319612878_Logo-Estirpe-Small.png' width='368' height='368' alt='' border='0' style='display:block;font-size:14px;max-width:100%;height:auto;' class='width368' />
-    </td>
-    </tr>
-    </table>
-    
-    <!--[if gte mso 9]></td></tr></table><![endif]-->
-    </td>
-    </tr>
-    </table>
-    
-    </td>
-    </tr>
-    </table>
-    
+    <td valign='top' align='center'><img src='https://images.chamaileon.io/61b992dd50343c608bcb0c26/61b992dd50343ce2d4cb0c27/1639551829618_imSoft_Transparente_Azul.png' width='600' height='215' alt='' border='0' style='display:block;font-size:14px;max-width:100%;height:auto;' class='width600' />
     </td>
     </tr>
     </table>
@@ -293,164 +278,32 @@ class SMTP
     </table>
     <table cellpadding='0' cellspacing='0' border='0' width='100%'>
     <tr>
-    <td align='center' width='100%'>
-    <!--[if gte mso 9]><table width='600' cellpadding='0' cellspacing='0'><tr><td><![endif]-->
-    <table class='width600 main-container' cellpadding='0' cellspacing='0' border='0' width='100%' style='max-width:600px;'>
-    <tr>
-    <td width='100%'>
-    
-    <table cellpadding='0' cellspacing='0' border='0' width='100%'>
-    <tr>
-    
-    <td valign='top'>
-    <table cellpadding='0' cellspacing='0' border='0' width='100%'>
-    <tr>
-    
-    <td valign='top' style='padding-top:5px;padding-right:15px;padding-left:15px;'>
-    <table cellpadding='0' cellspacing='0' border='0' width='100%' bgcolor='#ffffff' style='background-color:#ffffff;'>
-    <tr>
-    
-    <td valign='top' style='padding:10px;'><table cellpadding='0' cellspacing='0' border='0' width='100%' class='mcol'>
-    <tr>
-    <td valign='top' style='padding:0;mso-cellspacing:0in;'>
-    <!--[if gte mso 9]><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><![endif]-->
-    <!--[if gte mso 9]><td valign='top' style='padding:0;width:183.33333333333331px;'><![endif]-->
-    <table cellpadding='0' cellspacing='0' border='0' width='33.33333333333333%' class='col' align='left'>
-    <tr>
-    <td valign='top' width='100%' style='padding:0;'>
-    
-    <table cellpadding='0' cellspacing='0' border='0' width='100%'>
-    <tr>
-    
     <td style='padding:10px;'>
-    <table cellpadding='0' cellspacing='0' border='0' width='100%' style='border-top:2px solid transparent;'>
+    <table cellpadding='0' cellspacing='0' border='0' width='100%' style='border-top:2px solid #1b9cd9;'>
     <tr>
-    
-    <td>
+    <td style='font-size:0px;line-height:0;mso-line-height-rule:exactly;'>&nbsp;
     </td>
     </tr>
     </table>
-    
-    </td>
-    </tr>
-    </table>
-    
-    </td>
-    </tr>
-    </table>
-    <!--[if gte mso 9]></td><![endif]--><!--[if gte mso 9]><td valign='top' style='padding:0;width:183.33333333333331px;'><![endif]-->
-    <table cellpadding='0' cellspacing='0' border='0' width='33.33333333333333%' class='col' align='left'>
-    <tr>
-    <td valign='top' width='100%' style='padding:0;'>
-    
-    <table cellpadding='0' cellspacing='0' border='0' width='100%'>
-    <tr>
-    
-    <td style='padding:10px;'>
-    <table cellpadding='0' cellspacing='0' border='0' width='100%' style='border-top:2px solid #95dee3;'>
-    <tr>
-    
-    <td>
-    </td>
-    </tr>
-    </table>
-    
-    </td>
-    </tr>
-    </table>
-    
-    </td>
-    </tr>
-    </table>
-    <!--[if gte mso 9]></td><![endif]--><!--[if gte mso 9]><td valign='top' style='padding:0;width:183.33333333333337px;'><![endif]-->
-    <table cellpadding='0' cellspacing='0' border='0' width='33.333333333333336%' class='col' align='left'>
-    <tr>
-    <td valign='top' width='100%' style='padding:0;'>
-    
-    <table cellpadding='0' cellspacing='0' border='0' width='100%'>
-    <tr>
-    
-    <td style='padding:10px;'>
-    <table cellpadding='0' cellspacing='0' border='0' width='100%' style='border-top:2px solid transparent;'>
-    <tr>
-    
-    <td>
-    </td>
-    </tr>
-    </table>
-    
-    </td>
-    </tr>
-    </table>
-    
-    </td>
-    </tr>
-    </table>
-    <!--[if gte mso 9]></td><![endif]-->
-    <!--[if gte mso 9]></tr></table><![endif]-->
     </td>
     </tr>
     </table>
     <table cellpadding='0' cellspacing='0' border='0' width='100%'>
     <tr>
-    
-    <td valign='top' style='padding:10px;'><div style='font-family:Arial;font-size:16px;color:#000000;line-height:22px;text-align:left;'><h2 style='font-family:Lato, Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 28px; color: #404040; font-weight: normal; line-height: 42px; mso-line-height: exactly; mso-text-raise: 7px; padding: 0; margin: 0;text-align: center;'><span class='mso-font-fix-arial'><b>Informaci&oacute;n de contacto</b></span></h2>
+    <td valign='top' style='padding-top:5px;padding-right:10px;padding-bottom:5px;padding-left:10px;'><div style='font-family:Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;font-size:18px;color:#909494;line-height:25px;text-align:left;'><p style='padding: 0; margin: 0;text-align: center;'><span class='mso-font-fix-trebuchet_ms'><strong>Información de contacto</strong></span></p>
     </div>
     </td>
     </tr>
     </table>
-    
-    </td>
-    </tr>
-    </table>
-    
-    </td>
-    </tr>
-    </table>
-    
-    </td>
-    </tr>
-    </table>
-    
-    </td>
-    </tr>
-    </table>
-    <!--[if gte mso 9]></td></tr></table><![endif]-->
-    </td>
-    </tr>
-    </table>
     <table cellpadding='0' cellspacing='0' border='0' width='100%'>
     <tr>
-    <td align='center' width='100%'>
-    <!--[if gte mso 9]><table width='600' cellpadding='0' cellspacing='0'><tr><td><![endif]-->
-    <table class='width600 main-container' cellpadding='0' cellspacing='0' border='0' width='100%' style='max-width:600px;'>
-    <tr>
-    <td width='100%'>
-    
-    <table cellpadding='0' cellspacing='0' border='0' width='100%'>
-    <tr>
-    
-    <td valign='top'>
-    <table cellpadding='0' cellspacing='0' border='0' width='100%'>
-    <tr>
-    
-    <td valign='top' style='padding-right:15px;padding-left:15px;'>
-    <table cellpadding='0' cellspacing='0' border='0' width='100%' bgcolor='#ffffff' style='background-color:#ffffff;'>
-    <tr>
-    
-    <td valign='top' style='padding:20px;'>
-    <table cellpadding='0' cellspacing='0' border='0' width='100%'>
-    <tr>
-    
     <td style='padding:10px;'>
-    <table cellpadding='0' cellspacing='0' border='0' width='100%' style='border-top:2px solid #95dee3;'>
+    <table cellpadding='0' cellspacing='0' border='0' width='100%' style='border-top:2px solid #1b9cd9;'>
     <tr>
-    
-    <td>
+    <td style='font-size:0px;line-height:0;mso-line-height-rule:exactly;'>&nbsp;
     </td>
     </tr>
     </table>
-    
     </td>
     </tr>
     </table>
@@ -458,36 +311,30 @@ class SMTP
     <tr>
     <td valign='top' style='padding:0;mso-cellspacing:0in;'>
     <!--[if gte mso 9]><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><![endif]-->
-    <!--[if gte mso 9]><td valign='top' style='padding:0;width:210px;'><![endif]-->
-    <table cellpadding='0' cellspacing='0' border='0' width='39.62264150943396%' class='col' align='left'>
+    <!--[if gte mso 9]><td valign='top' style='padding:0;width:300px;'><![endif]-->
+    <table cellpadding='0' cellspacing='0' border='0' width='50%' class='col' align='left'>
     <tr>
     <td valign='top' width='100%' style='padding:0;'>
-    
     <table cellpadding='0' cellspacing='0' border='0' width='100%'>
     <tr>
-    
-    <td valign='top' style='padding-top:5px;padding-right:10px;padding-bottom:5px;padding-left:10px;'><div style='font-family:arial;font-size:18px;color:#131313;line-height:25px;text-align:left;'><p style='padding: 0; margin: 0;text-align: center;'><strong>Nombre del contacto</strong></p>
+    <td valign='top' style='padding-top:5px;padding-right:10px;padding-bottom:5px;padding-left:10px;'><div style='font-family:Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;font-size:18px;color:#909494;line-height:25px;text-align:left;'><p style='padding: 0; margin: 0;'><span class='mso-font-fix-trebuchet_ms'><strong>Nombre del contacto</strong></span></p>
     </div>
     </td>
     </tr>
     </table>
-    
     </td>
     </tr>
     </table>
-    <!--[if gte mso 9]></td><![endif]--><!--[if gte mso 9]><td valign='top' style='padding:0;width:320px;'><![endif]-->
-    <table cellpadding='0' cellspacing='0' border='0' width='60.37735849056604%' class='col' align='left'>
+    <!--[if gte mso 9]></td><![endif]--><!--[if gte mso 9]><td valign='top' style='padding:0;width:300px;'><![endif]-->
+    <table cellpadding='0' cellspacing='0' border='0' width='50%' class='col' align='left'>
     <tr>
     <td valign='top' width='100%' style='padding:0;'>
-    
     <table cellpadding='0' cellspacing='0' border='0' width='100%'>
     <tr>
-    
-    <td valign='top' style='padding-top:5px;padding-right:10px;padding-bottom:5px;padding-left:10px;'><div style='font-family:arial;font-size:18px;color:#131313;line-height:25px;text-align:left;'>[nombre]</div>
+    <td valign='top' style='padding-top:5px;padding-right:10px;padding-bottom:5px;padding-left:10px;'><div style='font-family:Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;font-size:18px;color:#909494;line-height:25px;text-align:left;'><span class='mso-font-fix-trebuchet_ms'>[nombre]</span></div>
     </td>
     </tr>
     </table>
-    
     </td>
     </tr>
     </table>
@@ -495,40 +342,47 @@ class SMTP
     <!--[if gte mso 9]></tr></table><![endif]-->
     </td>
     </tr>
-    </table><table cellpadding='0' cellspacing='0' border='0' width='100%' class='mcol'>
+    </table>
+    <table cellpadding='0' cellspacing='0' border='0' width='100%'>
+    <tr>
+    <td style='padding:10px;'>
+    <table cellpadding='0' cellspacing='0' border='0' width='100%' style='border-top:2px solid #1b9cd9;'>
+    <tr>
+    <td style='font-size:0px;line-height:0;mso-line-height-rule:exactly;'>&nbsp;
+    </td>
+    </tr>
+    </table>
+    </td>
+    </tr>
+    </table>
+    <table cellpadding='0' cellspacing='0' border='0' width='100%' class='mcol'>
     <tr>
     <td valign='top' style='padding:0;mso-cellspacing:0in;'>
     <!--[if gte mso 9]><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><![endif]-->
-    <!--[if gte mso 9]><td valign='top' style='padding:0;width:209px;'><![endif]-->
-    <table cellpadding='0' cellspacing='0' border='0' width='39.43396226415094%' class='col' align='left'>
+    <!--[if gte mso 9]><td valign='top' style='padding:0;width:300px;'><![endif]-->
+    <table cellpadding='0' cellspacing='0' border='0' width='50%' class='col' align='left'>
     <tr>
     <td valign='top' width='100%' style='padding:0;'>
-    
     <table cellpadding='0' cellspacing='0' border='0' width='100%'>
     <tr>
-    
-    <td valign='top' style='padding-top:5px;padding-right:10px;padding-bottom:5px;padding-left:10px;'><div style='font-family:arial;font-size:18px;color:#131313;line-height:25px;text-align:left;'><p style='padding: 0; margin: 0;text-align: center;'><strong>Correo electr&oacute;nico</strong></p>
+    <td valign='top' style='padding-top:5px;padding-right:10px;padding-bottom:5px;padding-left:10px;'><div style='font-family:Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;font-size:18px;color:#909494;line-height:25px;text-align:left;'><p style='padding: 0; margin: 0;'><span class='mso-font-fix-trebuchet_ms'><strong>Correo Electrónico</strong></span></p>
     </div>
     </td>
     </tr>
     </table>
-    
     </td>
     </tr>
     </table>
-    <!--[if gte mso 9]></td><![endif]--><!--[if gte mso 9]><td valign='top' style='padding:0;width:321px;'><![endif]-->
-    <table cellpadding='0' cellspacing='0' border='0' width='60.56603773584906%' class='col' align='left'>
+    <!--[if gte mso 9]></td><![endif]--><!--[if gte mso 9]><td valign='top' style='padding:0;width:300px;'><![endif]-->
+    <table cellpadding='0' cellspacing='0' border='0' width='50%' class='col' align='left'>
     <tr>
     <td valign='top' width='100%' style='padding:0;'>
-    
     <table cellpadding='0' cellspacing='0' border='0' width='100%'>
     <tr>
-    
-    <td valign='top' style='padding-top:5px;padding-right:10px;padding-bottom:5px;padding-left:10px;'><div style='font-family:arial;font-size:18px;color:#131313;line-height:25px;text-align:left;'>[mail]</div>
+    <td valign='top' style='padding-top:5px;padding-right:10px;padding-bottom:5px;padding-left:10px;'><div style='font-family:Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;font-size:18px;color:#909494;line-height:25px;text-align:left;'><span class='mso-font-fix-trebuchet_ms'>[mail]</span></div>
     </td>
     </tr>
     </table>
-    
     </td>
     </tr>
     </table>
@@ -536,40 +390,47 @@ class SMTP
     <!--[if gte mso 9]></tr></table><![endif]-->
     </td>
     </tr>
-    </table><table cellpadding='0' cellspacing='0' border='0' width='100%' class='mcol'>
+    </table>
+    <table cellpadding='0' cellspacing='0' border='0' width='100%'>
+    <tr>
+    <td style='padding:10px;'>
+    <table cellpadding='0' cellspacing='0' border='0' width='100%' style='border-top:2px solid #1b9cd9;'>
+    <tr>
+    <td style='font-size:0px;line-height:0;mso-line-height-rule:exactly;'>&nbsp;
+    </td>
+    </tr>
+    </table>
+    </td>
+    </tr>
+    </table>
+    <table cellpadding='0' cellspacing='0' border='0' width='100%' class='mcol'>
     <tr>
     <td valign='top' style='padding:0;mso-cellspacing:0in;'>
     <!--[if gte mso 9]><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><![endif]-->
-    <!--[if gte mso 9]><td valign='top' style='padding:0;width:206px;'><![endif]-->
-    <table cellpadding='0' cellspacing='0' border='0' width='38.867924528301884%' class='col' align='left'>
+    <!--[if gte mso 9]><td valign='top' style='padding:0;width:300px;'><![endif]-->
+    <table cellpadding='0' cellspacing='0' border='0' width='50%' class='col' align='left'>
     <tr>
     <td valign='top' width='100%' style='padding:0;'>
-    
     <table cellpadding='0' cellspacing='0' border='0' width='100%'>
     <tr>
-    
-    <td valign='top' style='padding-top:5px;padding-right:10px;padding-bottom:5px;padding-left:10px;'><div style='font-family:arial;font-size:18px;color:#131313;line-height:25px;text-align:left;'><p style='padding: 0; margin: 0;text-align: center;'><strong>Teléfono/Celular</strong></p>
+    <td valign='top' style='padding-top:5px;padding-right:10px;padding-bottom:5px;padding-left:10px;'><div style='font-family:Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;font-size:18px;color:#909494;line-height:25px;text-align:left;'><p style='padding: 0; margin: 0;'><span class='mso-font-fix-trebuchet_ms'><strong>Teléfono</strong></span></p>
     </div>
     </td>
     </tr>
     </table>
-    
     </td>
     </tr>
     </table>
-    <!--[if gte mso 9]></td><![endif]--><!--[if gte mso 9]><td valign='top' style='padding:0;width:324px;'><![endif]-->
-    <table cellpadding='0' cellspacing='0' border='0' width='61.132075471698116%' class='col' align='left'>
+    <!--[if gte mso 9]></td><![endif]--><!--[if gte mso 9]><td valign='top' style='padding:0;width:300px;'><![endif]-->
+    <table cellpadding='0' cellspacing='0' border='0' width='50%' class='col' align='left'>
     <tr>
     <td valign='top' width='100%' style='padding:0;'>
-    
     <table cellpadding='0' cellspacing='0' border='0' width='100%'>
     <tr>
-    
-    <td valign='top' style='padding-top:5px;padding-right:10px;padding-bottom:5px;padding-left:10px;'><div style='font-family:arial;font-size:18px;color:#131313;line-height:25px;text-align:left;'>[telefono]</div>
+    <td valign='top' style='padding-top:5px;padding-right:10px;padding-bottom:5px;padding-left:10px;'><div style='font-family:Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;font-size:18px;color:#909494;line-height:25px;text-align:left;'><span class='mso-font-fix-trebuchet_ms'>[telefono]</span></div>
     </td>
     </tr>
     </table>
-    
     </td>
     </tr>
     </table>
@@ -578,130 +439,51 @@ class SMTP
     </td>
     </tr>
     </table>
+    <table cellpadding='0' cellspacing='0' border='0' width='100%'>
+    <tr>
+    <td style='padding:10px;'>
+    <table cellpadding='0' cellspacing='0' border='0' width='100%' style='border-top:2px solid #1b9cd9;'>
+    <tr>
+    <td style='font-size:0px;line-height:0;mso-line-height-rule:exactly;'>&nbsp;
     </td>
     </tr>
     </table>
-    
-    </td>
-    </tr>
-    </table>
-    
-    </td>
-    </tr>
-    </table>
-    
-    </td>
-    </tr>
-    </table>
-    <!--[if gte mso 9]></td></tr></table><![endif]-->
     </td>
     </tr>
     </table>
     <table cellpadding='0' cellspacing='0' border='0' width='100%'>
     <tr>
-    <td align='center' width='100%'>
-    <!--[if gte mso 9]><table width='600' cellpadding='0' cellspacing='0'><tr><td><![endif]-->
-    <table class='width600 main-container' cellpadding='0' cellspacing='0' border='0' width='100%' style='max-width:600px;'>
-    <tr>
-    <td width='100%'>
-    
-    <table cellpadding='0' cellspacing='0' border='0' width='100%'>
-    <tr>
-    
-    <td valign='top'>
-    <table cellpadding='0' cellspacing='0' border='0' width='100%'>
-    <tr>
-    
-    <td valign='top' style='padding-right:15px;padding-left:15px;'>
-    <table cellpadding='0' cellspacing='0' border='0' width='100%' bgcolor='#ffffff' style='background-color:#ffffff;'>
-    <tr>
-    
-    <td valign='top' style='padding:20px;'>
-    <table cellpadding='0' cellspacing='0' border='0' width='100%'>
-    <tr>
-    
-    <td style='padding-top:20px;padding-right:10px;padding-left:10px;'>
-    <table cellpadding='0' cellspacing='0' border='0' width='100%' style='border-top:2px solid #95dee3;'>
-    <tr>
-    
-    <td>
-    </td>
-    </tr>
-    </table>
-    
-    </td>
-    </tr>
-    </table>
-    
-    </td>
-    </tr>
-    </table>
-    
-    </td>
-    </tr>
-    </table>
-    
-    </td>
-    </tr>
-    </table>
-    
-    </td>
-    </tr>
-    </table>
-    <!--[if gte mso 9]></td></tr></table><![endif]-->
-    </td>
-    </tr>
-    </table>
-    <table cellpadding='0' cellspacing='0' border='0' width='100%'>
-    <tr>
-    <td align='center' width='100%'>
-    <!--[if gte mso 9]><table width='600' cellpadding='0' cellspacing='0'><tr><td><![endif]-->
-    <table class='width600 main-container' cellpadding='0' cellspacing='0' border='0' width='100%' style='max-width:600px;'>
-    <tr>
-    <td width='100%'>
-    
-    <table cellpadding='0' cellspacing='0' border='0' width='100%'>
-    <tr>
-    
-    <td valign='top'>
-    <table cellpadding='0' cellspacing='0' border='0' width='100%'>
-    <tr>
-    
-    <td valign='top' style='padding-right:15px;padding-bottom:60px;padding-left:15px;'>
-    <table cellpadding='0' cellspacing='0' border='0' width='100%' bgcolor='#ffffff' style='background-color:#ffffff;'>
-    <tr>
-    
-    <td valign='top' style='padding:20px;'>
-    <table cellpadding='0' cellspacing='0' border='0' width='100%'>
-    <tr>
-    
-    <td valign='top' style='padding-top:5px;padding-right:10px;padding-bottom:5px;padding-left:10px;'><div style='font-family:arial;font-size:18px;color:#131313;line-height:25px;text-align:left;'><h2 style='font-family:Lato, Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 26px; color: #000000; font-weight: normal; line-height: 34px; mso-line-height: exactly; mso-text-raise: 4px; padding: 0; margin: 0;text-align: center;'><span class='mso-font-fix-arial'><strong>Mensaje</strong></span></h2>
+    <td valign='top' style='padding-top:5px;padding-right:10px;padding-bottom:5px;padding-left:10px;'><div style='font-family:Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;font-size:18px;color:#909494;line-height:25px;text-align:left;'><p style='padding: 0; margin: 0;text-align: center;'><span class='mso-font-fix-trebuchet_ms'><strong>Mensaje</strong></span></p>
     </div>
     </td>
     </tr>
     </table>
-    
     <table cellpadding='0' cellspacing='0' border='0' width='100%'>
     <tr>
-    
-    <td valign='top' style='padding-top:5px;padding-right:10px;padding-bottom:5px;padding-left:10px;'><div style='font-family:arial;font-size:18px;color:#131313;line-height:25px;text-align:left;'><p style='padding: 0; margin: 0;text-align: center;'>[mensaje]</p>
+    <td valign='top' style='padding-top:5px;padding-right:10px;padding-bottom:5px;padding-left:10px;'><div style='font-family:Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;font-size:18px;color:#909494;line-height:25px;text-align:left;'><p style='padding: 0; margin: 0;text-align: center;'><span class='mso-font-fix-trebuchet_ms'>[mensaje]</span></p>
     </div>
     </td>
     </tr>
     </table>
-    
+    <table cellpadding='0' cellspacing='0' border='0' width='100%'>
+    <tr>
+    <td style='padding:10px;'>
+    <table cellpadding='0' cellspacing='0' border='0' width='100%' style='border-top:2px solid #1b9cd9;'>
+    <tr>
+    <td style='font-size:0px;line-height:0;mso-line-height-rule:exactly;'>&nbsp;
     </td>
     </tr>
     </table>
-    
     </td>
     </tr>
     </table>
-    
+    <table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td width='100%' align='center'><table cellpadding='0' cellspacing='0' border='0'><tr><td><!--[if true]><table cellpadding='0' cellspacing='0' border='0' width='100%'><tr><td valign='top' style='padding:0;' width='40'><![endif]--><table cellpadding='0' cellspacing='0' border='0' align='left' style='width:40px;height:40px;' width='40' height='40'  ><tr><td align='center'><a href='https://www.facebook.com/weareimsoft' target='_blank'><img width='40' border='0' height='40' src='https://plugins.chamaileon.io/real-time-editor/latest/static/img/Facebook/fb-4-colorful.png' alt='facebook' /></a></td></tr></table><!--[if true]></td><td valign='top' style='padding:0;' width='20'><![endif]--><table cellpadding='0' cellspacing='0'
+    border='0' align='left' style='width:20px;height:20px;' width='20' height='20' ><tr><td style='font-size:0px;line-height:0;mso-line-height-rule:exactly;'>&nbsp;</td></tr></table><!--[if true]></td><td valign='top' style='padding:0;' width='40'><![endif]--><table cellpadding='0' cellspacing='0' border='0' align='left' style='width:40px;height:40px;' width='40' height='40'  ><tr><td align='center'><a href='https://www.instagram.com/weareimsoft/?hl=es-la' target='_blank'><img width='40' border='0' height='40' src='https://plugins.chamaileon.io/real-time-editor/latest/static/img/Instagram/ig-4-colorful.png' alt='instagram' /></a></td></tr></table><!--[if true]></td><td valign='top' style='padding:0;' width='20'><![endif]--><table cellpadding='0' cellspacing='0' border='0' align='left'
+    style='width:20px;height:20px;' width='20' height='20' ><tr><td style='font-size:0px;line-height:0;mso-line-height-rule:exactly;'>&nbsp;</td></tr></table><!--[if true]></td><td valign='top' style='padding:0;' width='40'><![endif]--><table cellpadding='0' cellspacing='0' border='0' align='left' style='width:40px;height:40px;' width='40' height='40'  ><tr><td align='center'><a href='https://www.linkedin.com/in/brandon-uriel-garc%C3%ADa-ramos-a3a236219/' target='_blank'><img width='40' border='0' height='40' src='https://plugins.chamaileon.io/real-time-editor/latest/static/img/Linkedin/li-4-colorful.png' alt='linkedin' /></a></td></tr></table><!--[if true]></td><td valign='top' style='padding:0;' width='20'><![endif]--><table cellpadding='0' cellspacing='0' border='0' align='left'
+    style='width:20px;height:20px;' width='20' height='20' ><tr><td style='font-size:0px;line-height:0;mso-line-height-rule:exactly;'>&nbsp;</td></tr></table><!--[if true]></td><td valign='top' style='padding:0;' width='40'><![endif]--><table cellpadding='0' cellspacing='0' border='0' align='left' style='width:40px;height:40px;' width='40' height='40'  ><tr><td align='center'><a href='https://twitter.com/weareimsoft' target='_blank'><img width='40' border='0' height='40' src='https://plugins.chamaileon.io/real-time-editor/latest/static/img/Twitter/tw-4-colorful.png' alt='twitter' /></a></td></tr></table><!--[if true]></td></tr></table><![endif]--></td></tr></table></td></tr></table>
     </td>
     </tr>
     </table>
-    
     </td>
     </tr>
     </table>
@@ -709,53 +491,6 @@ class SMTP
     </td>
     </tr>
     </table>
-    <table cellpadding='0' cellspacing='0' border='0' width='100%'>
-    <tr>
-    <td align='center' width='100%'>
-    <!--[if gte mso 9]><table width='600' cellpadding='0' cellspacing='0'><tr><td><![endif]-->
-    <table class='width600 main-container' cellpadding='0' cellspacing='0' border='0' width='100%' style='max-width:600px;'>
-    <tr>
-    <td width='100%'>
-    
-    <table cellpadding='0' cellspacing='0' border='0' width='100%'>
-    <tr>
-    
-    <td valign='top'>
-    </td>
-    </tr>
-    </table>
-    
-    </td>
-    </tr>
-    </table>
-    <!--[if gte mso 9]></td></tr></table><![endif]-->
-    </td>
-    </tr>
-    </table>
-    <table cellpadding='0' cellspacing='0' border='0' width='100%'>
-    <tr>
-    <td align='center' width='100%'>
-    <!--[if gte mso 9]><table width='600' cellpadding='0' cellspacing='0'><tr><td><![endif]-->
-    <table class='width600 main-container' cellpadding='0' cellspacing='0' border='0' width='100%' style='max-width:600px;'>
-    <tr>
-    <td width='100%'>
-    
-    <table cellpadding='0' cellspacing='0' border='0' width='100%'>
-    <tr>
-    
-    <td valign='top'>
-    </td>
-    </tr>
-    </table>
-    
-    </td>
-    </tr>
-    </table>
-    <!--[if gte mso 9]></td></tr></table><![endif]-->
-    </td>
-    </tr>
-    </table>
-    
     </td>
     </tr>
     </table>

@@ -11,7 +11,7 @@ export class EmailService {
 
   private url:string = environment.baseUrl;
 
-  constructor(private http: HttpClient) { }
+  constructor( private http: HttpClient ) { }
 
   sendContactEmail( formContact: FormContact ) {
 

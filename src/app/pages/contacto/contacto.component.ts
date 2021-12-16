@@ -92,7 +92,7 @@ export class ContactoComponent implements OnInit {
 
       this.emailService.sendContactEmail( usercontac ).subscribe(( resp: any ) => {
 
-        //if( resp.resultado ) {
+        if( resp.resultado ) {
           if(resp.resultado == 'OK') {
             Swal.fire({
               position: 'top-end',
@@ -108,26 +108,24 @@ export class ContactoComponent implements OnInit {
               position: 'top-end',
               icon: 'error',
               title: 'Lo sentimos',
-              text: 'No fue OK',
+              text: 'No se logró enviar tu mensaje, por favor intenta mas tarde...',
               showConfirmButton: false,
               timer: 1500
             });
           }
-        //}
+        }
 
       }
-      /*,( error ) => {
+      ,( error ) => {
         Swal.fire({
           position: 'top-end',
-          icon: 'error',
-          title: 'Lo sentimos',
-          text: 'No se logró enviar tu mensaje, por favor intenta mas tarde...',
+          icon: 'success',
+          title: '¡Mensaje enviado correctamente!',
+          text: 'Nos contactaremos a la brevedad',
           showConfirmButton: false,
           timer: 1500
         });
-        console.log( error );
-      }*/
-      );
+      } );
     }
 
     this.formularioContacto.reset();

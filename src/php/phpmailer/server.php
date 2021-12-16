@@ -46,9 +46,10 @@
             $mail -> Password   = "contacto_imsoft_2487";
             $mail -> SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
             $mail -> Port       = 465;
-            $mail -> setFrom("contacto@imsoft.com.mx");
-            $mail -> addAddress( "contacto@imsoft.com.mx", $params -> nombre );
-            $mail -> addCC( $params -> correo );
+            $mail -> setFrom( "contacto@imsoft.com.mx" );
+            $mail -> addAddress( $params -> correo, $params -> nombre );
+            $mail -> addCC( 'contacto@imsoft.com.mx' );
+            $mail -> addBCC( 'contacto@imsoft.com.mx' );
             $mail -> isHTML( true );
             $mail -> Subject    = "Contacto desde el sitio web";
             $mail -> Body       = $newhtml;
@@ -73,6 +74,6 @@
         }
     }
 
-    header('Content-Type: application/json');
+    header("Content-Type: application/json");
 
 ?>
