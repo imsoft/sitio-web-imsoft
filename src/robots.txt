@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: http://imsoft.com.mx/sitemap.xml
+Sitemap: http://www.imsoft.com.mx/sitemap.xml
+Sitemap: https://imsoft.com.mx/sitemap.xml
+Sitemap: https://www.imsoft.com.mx/sitemap.xml
