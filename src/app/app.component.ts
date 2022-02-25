@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import * as AOS from 'aos';
+//import AOS from 'aos';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +10,7 @@ export class AppComponent {
   title = 'imsoft';
 
   ngOnInit(): void {
-    AOS.init();    
+    //aos.init();
   }
 
 }
